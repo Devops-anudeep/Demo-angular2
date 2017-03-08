@@ -1,0 +1,20 @@
+<p>
+Hi
+</p>
+<form>
+  <md-select [(ngModel)]="selectedValue" name="food" #food="ngModel" value="ChooseHere">
+    <md-option [value]="''" disabled>Choose Here</md-option>
+    <md-option *ngFor="let food of foods" [value]="food.value" (click)="onchange()">
+      {{food.viewValue}}
+    </md-option>
+  </md-select>
+
+  <p> Selected value: {{selectedValue1}} </p>
+
+  <md-select placeholder="Favorite food" [(ngModel)]="selectedValue1" name="food" >
+    <md-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </md-option>
+  </md-select>
+ 	
+</form>
